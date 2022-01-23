@@ -8,8 +8,6 @@ const HouseFilter = ({ allHouses }) => {
     : [];
   countries.unshift(null);
 
-  console.log(countries);
-
   const onSearchChange = (e) => {
     const country = e.target.value;
     navigate(`/searchresults/${country}`);
