@@ -1,3 +1,15 @@
+
 .logo {
-  height: 100px;
+  height: 50px;
+}
+
+.appName {
+  font-style: italic;
+  font-size: x-large;
+  color: coral;
+}
+
+.featuredHouse {
+  border-radius: 2px;
+  background-color: rgb(255, 190, 166);
 }

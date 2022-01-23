@@ -2,10 +2,10 @@ import { useNavigate } from "react-router-dom";
 import "./search-results.css";
 
 const SearchResultsRow = ({ house }) => {
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   const setActive = () => {
-    history.push(`/house/${house.id}`);
+    navigate(`/house/${house.id}`);
   };
 
   return (

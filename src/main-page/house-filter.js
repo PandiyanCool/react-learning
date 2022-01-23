@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 const HouseFilter = ({ allHouses }) => {
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   const countries = allHouses
     ? Array.from(new Set(allHouses.map((x) => x.country)))
@@ -12,7 +12,7 @@ const HouseFilter = ({ allHouses }) => {
 
   const onSearchChange = (e) => {
     const country = e.target.value;
-    history.push(`/searchresults/${country}`);
+    navigate(`/searchresults/${country}`);
   };
 
   return (
