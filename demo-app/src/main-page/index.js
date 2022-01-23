@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./main-page.css";
 import Header from "./header";
 import FeaturedHouse from "./featured-house";
+import SearchResults from '../search-results'
 
 function App() {
   const [allHouses, setAllHouses] = useState([]);
@@ -20,7 +21,6 @@ function App() {
   const featuredHouse = useMemo(() => {
     if (allHouses.length) {
       const randomHouseIndex = Math.floor(Math.random() * allHouses.length);
-
       return allHouses[randomHouseIndex];
     }
   }, [allHouses]);
@@ -30,11 +30,17 @@ function App() {
   return (
     <BrowserRouter>
       <div className="container">
-        <Header appName="Bootstrap in 30" />
+        <Header appName="Providing houses all over the world" />
       </div>
       <Routes>
-        <Route path="/" element={<FeaturedHouse houses={featuredHouse}></FeaturedHouse>}>
-        </Route>
+        <Route
+        path="/searchresults/:country"
+        element={<SearchResults allHouses={allHouses}></SearchResults>}
+        ></Route>
+        <Route
+          path="/"
+          element={<FeaturedHouse house={featuredHouse}></FeaturedHouse>}
+        ></Route>
       </Routes>
     </BrowserRouter>
   );
