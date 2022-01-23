@@ -1,7 +1,8 @@
 import { useEffect, useState, useMemo } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./main-page.css";
 import Header from "./header";
-import Carousel from "./carousel";
+import FeaturedHouse from "./featured-house";
 
 function App() {
   const [allHouses, setAllHouses] = useState([]);
@@ -27,10 +28,16 @@ function App() {
   console.log(featuredHouse);
 
   return (
-    <div className="container">
-      <Header appName="Bootstrap in 30" />
-      <Carousel />
-    </div>
+    <BrowserRouter>
+      <div className="container">
+        <Header appName="Bootstrap in 30" />
+      </div>
+      <Routes>
+        <Route path="/">
+          <FeaturedHouse houses={featuredHouse}></FeaturedHouse>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
