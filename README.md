@@ -1,3 +1,7 @@
+![Build staus](https://github.com/PandiyanCool/react-learning/actions/workflows/azure-static-web-apps-salmon-glacier-0f1ad7f10.yml/badge.svg) ![GitHub repo size](https://img.shields.io/github/repo-size/pandiyancool/react-learning) ![Twitter Follow](https://img.shields.io/twitter/follow/pandiyan_cool?style=plastic) 
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
