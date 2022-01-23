@@ -33,8 +33,7 @@ function App() {
         <Header appName="Bootstrap in 30" />
       </div>
       <Routes>
-        <Route path="/">
-          <FeaturedHouse houses={featuredHouse}></FeaturedHouse>
+        <Route path="/" element={<FeaturedHouse houses={featuredHouse}></FeaturedHouse>}>
         </Route>
       </Routes>
     </BrowserRouter>
