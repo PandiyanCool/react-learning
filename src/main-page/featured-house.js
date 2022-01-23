@@ -1,7 +1,6 @@
 import House from "../house";
 
 const FeaturedHouse = ({ house }) => {
-    console.log(house)
   if (house) {
     return (
       <div>

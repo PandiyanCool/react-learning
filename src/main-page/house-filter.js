@@ -1,11 +1,14 @@
 import { useNavigate } from "react-router-dom";
 
 const HouseFilter = ({ allHouses }) => {
-  const history = useNavigate;
+  const history = useNavigate();
+  
   const countries = allHouses
     ? Array.from(new Set(allHouses.map((x) => x.country)))
     : [];
   countries.unshift(null);
+
+  console.log(countries);
 
   const onSearchChange = (e) => {
     const country = e.target.value;

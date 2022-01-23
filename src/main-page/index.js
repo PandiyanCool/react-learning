@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./main-page.css";
 import Header from "./header";
 import FeaturedHouse from "./featured-house";
-import SearchResults from '../search-results'
+import SearchResults from '../search-results';
+import HouseFilter from "./house-filter";
 
 function App() {
   const [allHouses, setAllHouses] = useState([]);
@@ -25,12 +26,11 @@ function App() {
     }
   }, [allHouses]);
 
-  console.log(featuredHouse);
-
   return (
     <BrowserRouter>
       <div className="container">
         <Header appName="Providing houses all over the world" />
+        <HouseFilter allHouses={allHouses} />
       </div>
       <Routes>
         <Route
