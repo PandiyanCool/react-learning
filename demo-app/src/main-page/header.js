@@ -1,4 +1,4 @@
-const Header = (props) => (
+const Header = ({ appName }) => (
   <nav className="navbar navbar-light bg-light">
     <div className="container-fluid">
       <span className="navbar-brand" href="#">
@@ -9,7 +9,7 @@ const Header = (props) => (
           height="24"
           className="d-inline-block align-text-top"
         />
-        <span className="ms-2">{props.appName}</span>
+        <span className="ms-2">{appName}</span>
       </span>
     </div>
   </nav>
