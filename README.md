@@ -6,7 +6,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-As angular developer - I always wanted to explore reactjs and do some experiments. So here it is. A small app which covers good amount of featureds of react.
+As angular developer - I always wanted to explore reactjs and do some experiments. So here it is. A small app which covers good amount of features of react.
 
 ## Available Scripts
 
